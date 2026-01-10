@@ -18,6 +18,11 @@ environment {
                  echo "----------- build complted ----------"
             }
         }
+        steps {
+        withMaven(maven: 'Maven') {
+            sh 'mvn clean deploy -Dmaven.test.skip=true'
+            }
+        }
         stage("test"){
             steps{
                 echo "----------- unit test started ----------"
