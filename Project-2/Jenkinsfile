@@ -75,7 +75,7 @@ environment {
     }
 
 
-    stage(" Docker Build ") {
+    /*stage(" Docker Build ") {
       steps {
         script {
            echo '<--------------- Docker Build Started --------------->'
@@ -83,9 +83,9 @@ environment {
            echo '<--------------- Docker Build Ends --------------->'
         }
       }
-    }
+    }*/
 
-            stage (" Docker Publish "){
+          /*  stage (" Docker Publish "){
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
@@ -95,7 +95,7 @@ environment {
                echo '<--------------- Docker Publish Ended --------------->'  
             }
         }
-    }
+    } */
 
     // stage (" Deploy "){
     //     steps {
@@ -105,7 +105,7 @@ environment {
     //     }
     // }
 
-stage(" Deploy ") {
+/*stage(" Deploy ") {
        steps {
          script {
             echo '<--------------- Helm Deploy Started --------------->'
@@ -113,7 +113,7 @@ stage(" Deploy ") {
             echo '<--------------- Helm deploy Ends --------------->'
          }
        }
-}  
+}  */
 }
 }
 
