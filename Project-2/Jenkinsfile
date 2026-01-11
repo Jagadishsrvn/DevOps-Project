@@ -12,11 +12,11 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "----------- build started ----------"
-                sh 'mvn clean package -DskipTests'
-                echo "----------- build completed ----------"
-            }
-        }
+                 dir('Project-2') {
+                    sh 'mvn clean package -DskipTests'
+                                 }
+                    }
+                        }
 
         stage('Test') {
             steps {
