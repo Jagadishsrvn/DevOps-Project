@@ -2,15 +2,12 @@ def registry = 'https://satishk.jfrog.io'
 def imageName = 'satishk.jfrog.io/satish-docker-local/sample_app'
 def version   = '2.1.2'
 pipeline {
-    agent {
-        node {
-            label 'maven'
-        }
+    agent { label 'maven' }
+
+    tools {
+        maven 'maven-3.9.12'
     }
-environment {
-    PATH = "/opt/apache-maven-3.9.12/bin:$PATH"
-}
-    stages {
+  stages {
         stage("build"){
             steps {
                  echo "----------- build started ----------"
