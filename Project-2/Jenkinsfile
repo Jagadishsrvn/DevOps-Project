@@ -19,11 +19,11 @@ pipeline {
                         }
 
         stage('Test') {
-            steps {
-                echo "----------- test started ----------"
-                sh 'mvn test'
-                echo "----------- test completed ----------"
-            }
+             steps {
+                dir('Project-2') {
+                            sh 'mvn test'
+                                 }
+                    }
         }
 
     }
